@@ -1,7 +1,7 @@
 <?php
 	require_once '../../php/mysql.php';
 	$search = isset($_POST['search'])?$mysql->real_escape_string($_POST['search']):'';
-	$sql = "SELECT * FROM juri LEFT JOIN lomba ON juri.juri_id_lomba=lomba.lomba_id WHERE juri_nama LIKE '%".$search."%' OR lomba_nama LIKE '%".$search."%' ";
+	$sql = "SELECT * FROM juri LEFT JOIN lomba ON juri.juri_id_lomba=lomba.lomba_id WHERE juri_username='".$_SESSION['username']."' ";
 	$query = $mysql->query($sql);
 ?>
 

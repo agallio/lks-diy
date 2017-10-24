@@ -1,7 +1,7 @@
 <?php
 	require_once '../../php/mysql.php';
 	$search = isset($_POST['search'])?$mysql->real_escape_string($_POST['search']):'';
-	$sql = "SELECT * FROM nilai INNER JOIN peserta ON nilai.nilai_id_peserta=peserta.peserta_id INNER JOIN lomba ON nilai.nilai_id_lomba=lomba.lomba_id WHERE peserta_nama LIKE '%".$search."%' OR lomba_nama LIKE '%".$search."%' ";
+	$sql = "SELECT * FROM nilai INNER JOIN peserta ON nilai.nilai_id_peserta=peserta.peserta_id INNER JOIN lomba ON nilai.nilai_id_lomba=lomba.lomba_id WHERE nilai_id_lomba=".$_SESSION['lomba_id']." AND peserta_nama LIKE '%".$search."%' ";
 	$query = $mysql->query($sql);
 ?>
 
