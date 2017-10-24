@@ -5,4 +5,3 @@
 	<div class="tabel"></div>
 </div>
 </div>
-<script src="../assets/js/search.js"></script>
