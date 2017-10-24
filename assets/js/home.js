@@ -10,7 +10,9 @@ $(document).ready(function(){
 			success: function(response) {
 				if (response.success) {
 					$(".messages").html('<div class="msg msg-success"><p>Registrasi Berhasil</p></div>');
-					$(".messages").fadeTo(1500,500).slideUp(500);
+					$(".messages").fadeTo(1500,500).slideUp(500,function(){
+						location.reload(true);
+					});
 				} else {
 					$(".messages").html('<div class="msg msg-error"><p>'+response.messages+'</p></div>');
 					$(".messages").fadeTo(1500,500).slideUp(500);

@@ -65,7 +65,7 @@ if (!isset($_SESSION['peserta'])) {
 					<input type="number" class="form-control" name="no" placeholder="Nomor Peserta (max = 999)" max="999" required>
 					<input type="text" class="form-control" name="tgl" placeholder="Tanggal Lahir (DD-MM-YYYY)" required>
 					<input type="text" class="form-control" name="sekolah" placeholder="Asal Sekolah" required>
-					<input type="text" class="form-control" name="username" placeholder="Nama Pengguna" disabled>
+					<input type="text" class="form-control" name="username" placeholder="Nama Pengguna" required>
 					<select name="kelas" class="form-control" required>
 						<option disabled selected>Pilih Kelas</option>
 						<option value="10">X</option>

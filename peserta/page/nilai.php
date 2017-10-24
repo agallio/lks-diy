@@ -21,7 +21,7 @@
 				</thead>
 				<?php 
 					$no = 1;
-					$sql = "SELECT * FROM nilai INNER JOIN peserta ON nilai.nilai_id_peserta=peserta.peserta_id INNER JOIN lomba ON nilai.nilai_id_lomba=lomba.lomba_id WHERE peserta_id_lomba='".$_SESSION['peserta_id_lomba']."' ";
+					$sql = "SELECT * FROM nilai INNER JOIN peserta ON nilai.nilai_id_peserta=peserta.peserta_id INNER JOIN lomba ON nilai.nilai_id_lomba=lomba.lomba_id WHERE peserta_id_lomba='".$_SESSION['peserta_id_lomba']."' ORDER BY nilai_jml DESC";
 					$query = $mysql->query($sql);
 					while($row=$query->fetch_assoc()) {
 				?>

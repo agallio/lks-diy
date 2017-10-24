@@ -89,7 +89,7 @@ if (isset($_SESSION['peserta'])) {
 	<div class="modal mo-register">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2>Daftar</h2>
+				<h2>Registrasi Peserta</h2>
 			</div>
 			<div class="modal-body">
 				<img src="assets/img/logo.png" alt="logo">

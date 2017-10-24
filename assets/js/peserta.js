@@ -31,7 +31,7 @@ $(document).ready(function(){
 			data: form.serialize(),
 			success: function(response) {
 				if (response.success) {
-					$(".messages").html('<div class="msg msg-success"><p>Ubah Data Berhasil</p></div>');
+					$(".messages").html('<div class="msg msg-success"><p>Ubah Data Berhasil. Silakan Login Kembali</p></div>');
 					$(".messages").fadeTo(1500,500).slideUp(500,function(){
 						location.reload(true);
 					});
